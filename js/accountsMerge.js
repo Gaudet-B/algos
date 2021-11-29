@@ -27,13 +27,13 @@ const accountsMerge = accounts => {
             
             if (!adjacentList.hasOwnProperty(firstEmail)) {
                 adjacentList[firstEmail] = []
-            
             }
             adjacentList[firstEmail].push(accountEmail)
 
             if (!adjacentList.hasOwnProperty(accountEmail)) {
-                adjacentList[accountEmail].push(firstEmail)
+                adjacentList[accountEmail] = []
             }
+            adjacentList[accountEmail].push(firstEmail)
         }
     }
 
