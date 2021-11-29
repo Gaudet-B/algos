@@ -11,7 +11,7 @@ const accountsMerge = accounts => {
         visited.add(email)
         mergedAccount.push(email)
         if (!adjacentList.hasOwnProperty(email)) return
-        for (let i = 0; i < adjacentList[email],length; i++) {
+        for (let i = 0; i < adjacentList[email].length; i++) {
             if (!visited.has(adjacentList[email][i])) {
                 depthFirstSearch(mergedAccount, adjacentList[email][i])
             }
