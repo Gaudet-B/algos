@@ -2,17 +2,17 @@
  * @param {number[]} position
  * @return {number}
  */
-var minCostToMoveChips = function (position) {
-    var evenCnt = 0;
-    var oddCnt = 0;
+const minCostToMoveChips = position => {
+    var even = 0;
+    var odd = 0;
 
     for (let i = 0; i < position.length; i++) {
         if (position[i] % 2 == 0) {
-            evenCnt++;
+            even++
         } else {
-            oddCnt++;
+            odd++
         }
     }
 
-    return Math.min(evenCnt, oddCnt)
-};
+    return Math.min(even, odd)
+}
